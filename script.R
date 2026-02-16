@@ -49,7 +49,7 @@ align_length
 
 #GC Content
 base_counts <- colSums(alphabetFrequency(aligned)[, c("A", "T", "G", "C")])
-GC_percent <- (base_counts["G"] + base_counts["C"]/ sum (base_counts) *100)
+GC_percent <- (base_counts["G"] + base_counts["C"]) /
 GC_percent
 
 #Convert to seqinr 
