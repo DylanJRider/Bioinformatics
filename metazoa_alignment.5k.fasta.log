@@ -1,0 +1,209 @@
+IQ-TREE multicore version 2.4.0 for MacOS Intel 64-bit built Feb  7 2025
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    Dylans-MacBook-Pro-2.local (AVX512, FMA3, 16 GB RAM)
+Command: /Users/dj17/Downloads/iqtree-2.4.0-macOS-intel/bin/iqtree2 -s /Users/dj17/Downloads/metazoa_alignment.5k.fasta -m MFP -alrt 1000 -B 1000 -T AUTO
+Seed:    984226 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Apr  9 15:01:33 2026
+Kernel:  AVX+FMA - auto-detect threads (8 CPU cores detected)
+
+Reading alignment file /Users/dj17/Downloads/metazoa_alignment.5k.fasta ... Fasta format detected
+Reading fasta file: done in 0.00314999 secs using 75.87% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 22 sequences with 5000 columns, 4496 distinct patterns
+3607 parsimony-informative, 842 singleton sites, 551 constant sites
+                               Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 9.10759e-05 secs using 403% CPU
+   1  Antipathes_caribbeana           21.34%    failed      0.01%
+   2  Cerebratulus_sp                 15.82%    failed      0.65%
+   3  Golfingia_vulgaris              39.52%    failed      0.00%
+   4  Grantia_compressa               30.52%    failed      0.00%
+   5  Homo_sapiens                    11.52%    failed      0.00%
+   6  Latimeria_chalumnae             10.44%    failed      0.02%
+   7  Lepisosteus_oculatus             9.66%    failed      0.00%
+   8  Leptochiton_rugatus             56.80%    failed      0.00%
+   9  Macrostomum_lignano             31.48%    failed      0.00%
+  10  Novocrania_anomala              85.24%    passed      6.68%
+  11  Parhyale_sp.                    51.58%    passed      9.46%
+  12  Petromyzon_marinus              72.22%    failed      0.00%
+  13  Plakina_jani                    18.40%    failed      0.00%
+  14  Plumapathes_pennacea            23.46%    failed      0.00%
+  15  Priapulus_sp                    52.48%    failed      3.88%
+  16  Ptychodera_flava                31.42%    failed      0.00%
+  17  Rhabdopleura_sp                 49.24%    failed      0.00%
+  18  Strigamia_maritima              23.40%    failed      0.00%
+  19  Strongylocentrotus_purpuratus   20.68%    failed      0.75%
+  20  Tribolium_castaneum             18.46%    passed     76.84%
+  21  Xenopus_tropicalis              13.08%    passed     33.26%
+  22  Xenoturbella_bocki              40.24%    failed      3.00%
+WARNING: 5 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                           33.05%  18 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.012 seconds
+Measuring multi-threading efficiency up to 8 CPU cores
+Increase to 10 rounds for branch lengths
+72 trees examined
+Threads: 1 / Time: 8.112 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -77847
+Threads: 2 / Time: 6.048 sec / Speedup: 1.341 / Efficiency: 67% / LogL: -77847
+Threads: 3 / Time: 3.972 sec / Speedup: 2.042 / Efficiency: 68% / LogL: -77847
+Threads: 4 / Time: 3.353 sec / Speedup: 2.419 / Efficiency: 60% / LogL: -77847
+Threads: 5 / Time: 3.339 sec / Speedup: 2.430 / Efficiency: 49% / LogL: -77847
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -74657.468
+Optimal log-likelihood: -74657.218
+Rate parameters:  A-C: 1.88477  A-G: 2.58268  A-T: 0.93359  C-G: 1.58065  C-T: 3.61132  G-T: 1.00000
+Base frequencies:  A: 0.291  C: 0.232  G: 0.254  T: 0.224
+Proportion of invariable sites: 0.082
+Gamma shape alpha: 1.270
+Parameters optimization took 1 rounds (0.026 sec)
+Time for fast ML tree search: 0.333 seconds
+
+NOTE: ModelFinder requires 49 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 5000 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         77994.716    49  156087.433   156088.422   156406.775
+  2  GTR+F+I       76090.448    50  152280.895   152281.926   152606.755
+  3  GTR+F+G4      74751.817    50  149603.635   149604.665   149929.494
+  4  GTR+F+I+G4    74657.155    51  149416.310   149417.382   149748.687
+  5  GTR+F+R2      75061.118    51  150224.237   150225.309   150556.614
+  6  GTR+F+R3      74675.163    53  149456.325   149457.483   149801.737
+  7  GTR+F+R4      74632.142    55  149374.284   149375.530   149732.730
+  8  GTR+F+R5      74631.576    57  149377.152   149378.490   149748.632
+ 14  GTR+F+I+R2    74778.202    52  149660.405   149661.519   149999.299
+ 15  GTR+F+I+R3    74642.778    54  149393.556   149394.757   149745.484
+ 16  GTR+F+I+R4    74633.174    56  149378.347   149379.639   149743.310
+ 17  GTR+F+I+R5    74631.379    58  149378.759   149380.144   149756.756
+ 29  SYM+R4        74684.021    52  149472.041   149473.156   149810.935
+ 51  TVM+F+R4      74668.201    54  149444.402   149445.603   149796.330
+ 73  TVMe+R4       74683.869    51  149469.738   149470.810   149802.115
+ 95  TIM3+F+R4     74637.836    53  149381.672   149382.829   149727.083
+117  TIM3e+R4      74710.505    50  149521.011   149522.041   149846.871
+139  TIM2+F+R4     74720.857    53  149547.713   149548.870   149893.124
+161  TIM2e+R4      74804.861    50  149709.722   149710.752   150035.581
+183  TIM+F+R4      74716.148    53  149538.297   149539.454   149883.708
+205  TIMe+R4       74814.648    50  149729.295   149730.326   150055.155
+227  TPM3u+F+R4    74674.764    52  149453.527   149454.641   149792.421
+249  TPM3+R4       74710.478    49  149518.956   149519.945   149838.298
+271  TPM2u+F+R4    74753.946    52  149611.892   149613.006   149950.786
+293  TPM2+R4       74804.844    49  149707.688   149708.678   150027.031
+315  K3Pu+F+R4     74749.683    52  149603.366   149604.480   149942.260
+337  K3P+R4        74814.602    49  149727.204   149728.193   150046.546
+359  TN+F+R4       74723.759    52  149551.519   149552.633   149890.413
+381  TNe+R4        74827.217    49  149752.433   149753.423   150071.776
+403  HKY+F+R4      74757.557    51  149617.115   149618.187   149949.492
+425  K2P+R4        74827.248    48  149750.495   149751.445   150063.320
+447  F81+F+R4      75287.065    50  150674.130   150675.160   150999.990
+469  JC+R4         75413.493    47  150920.986   150921.897   151227.294
+Akaike Information Criterion:           GTR+F+R4
+Corrected Akaike Information Criterion: GTR+F+R4
+Bayesian Information Criterion:         TIM3+F+R4
+Best-fit model: TIM3+F+R4 chosen according to BIC
+
+All model information printed to /Users/dj17/Downloads/metazoa_alignment.5k.fasta.model.gz
+CPU time for ModelFinder: 105.709 seconds (0h:1m:45s)
+Wall-clock time for ModelFinder: 35.805 seconds (0h:0m:35s)
+Generating 1000 samples for ultrafast bootstrap (seed: 984226)...
+
+NOTE: 30 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -75287.829
+2. Current log-likelihood: -74647.325
+3. Current log-likelihood: -74638.881
+4. Current log-likelihood: -74638.208
+5. Current log-likelihood: -74637.965
+Optimal log-likelihood: -74637.880
+Rate parameters:  A-C: 1.81286  A-G: 2.66812  A-T: 1.00000  C-G: 1.81286  C-T: 3.78627  G-T: 1.00000
+Base frequencies:  A: 0.291  C: 0.232  G: 0.254  T: 0.224
+Site proportion and rates:  (0.133,0.023) (0.242,0.275) (0.411,0.800) (0.214,2.811)
+Parameters optimization took 5 rounds (0.381 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00108004 secs using 405% CPU
+Computing ML distances took 0.001304 sec (of wall-clock time) 0.004952 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 3.69549e-05 secs using 259.8% CPU
+Computing RapidNJ tree took 0.000145 sec (of wall-clock time) 0.000440 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -74918.258
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.758 second
+Computing log-likelihood of 98 initial trees ... 0.650 seconds
+Current best score: -74637.880
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -74637.829
+Iteration 10 / LogL: -74638.118 / Time: 0h:0m:40s
+Iteration 20 / LogL: -74640.646 / Time: 0h:0m:43s
+Finish initializing candidate tree set (5)
+Current best tree score: -74637.829 / CPU time: 7.046
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -74638.839 / Time: 0h:0m:45s (0h:0m:22s left)
+Iteration 40 / LogL: -74637.986 / Time: 0h:0m:46s (0h:0m:17s left)
+Iteration 50 / LogL: -74640.705 / Time: 0h:0m:48s (0h:0m:12s left)
+Log-likelihood cutoff on original alignment: -74687.389
+Iteration 60 / LogL: -74638.083 / Time: 0h:0m:49s (0h:0m:9s left)
+Iteration 70 / LogL: -74641.108 / Time: 0h:0m:50s (0h:0m:6s left)
+Iteration 80 / LogL: -74637.869 / Time: 0h:0m:51s (0h:0m:4s left)
+Iteration 90 / LogL: -74639.049 / Time: 0h:0m:53s (0h:0m:2s left)
+Iteration 100 / LogL: -74640.972 / Time: 0h:0m:54s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -74681.066
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:54s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -74637.829
+2. Current log-likelihood: -74637.800
+3. Current log-likelihood: -74637.784
+4. Current log-likelihood: -74637.772
+Optimal log-likelihood: -74637.765
+Rate parameters:  A-C: 1.81752  A-G: 2.68807  A-T: 1.00000  C-G: 1.81752  C-T: 3.81095  G-T: 1.00000
+Base frequencies:  A: 0.291  C: 0.232  G: 0.254  T: 0.224
+Site proportion and rates:  (0.134,0.024) (0.243,0.279) (0.406,0.801) (0.217,2.780)
+Parameters optimization took 4 rounds (0.221 sec)
+BEST SCORE FOUND : -74637.765
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.310 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file /Users/dj17/Downloads/metazoa_alignment.5k.fasta.splits.nex
+Total tree length: 17.888
+
+Total number of iterations: 102
+CPU time used for tree search: 68.846 sec (0h:1m:8s)
+Wall-clock time used for tree search: 18.186 sec (0h:0m:18s)
+Total CPU time used: 178.792 sec (0h:2m:58s)
+Total wall-clock time used: 55.088 sec (0h:0m:55s)
+
+Computing bootstrap consensus tree...
+Reading input file /Users/dj17/Downloads/metazoa_alignment.5k.fasta.splits.nex...
+22 taxa and 142 splits.
+Consensus tree written to /Users/dj17/Downloads/metazoa_alignment.5k.fasta.contree
+Reading input trees file /Users/dj17/Downloads/metazoa_alignment.5k.fasta.contree
+Log-likelihood of consensus tree: -74637.765
+
+Analysis results written to: 
+  IQ-TREE report:                /Users/dj17/Downloads/metazoa_alignment.5k.fasta.iqtree
+  Maximum-likelihood tree:       /Users/dj17/Downloads/metazoa_alignment.5k.fasta.treefile
+  Likelihood distances:          /Users/dj17/Downloads/metazoa_alignment.5k.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /Users/dj17/Downloads/metazoa_alignment.5k.fasta.splits.nex
+  Consensus tree:                /Users/dj17/Downloads/metazoa_alignment.5k.fasta.contree
+  Screen log file:               /Users/dj17/Downloads/metazoa_alignment.5k.fasta.log
+
+Date and Time: Thu Apr  9 15:02:29 2026

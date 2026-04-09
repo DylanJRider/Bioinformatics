@@ -1,0 +1,6 @@
+"metric","value"
+"mean_sh_alrt",81.3157894736842
+"mean_ufboot",84.0526315789474
+"nodes_ufboot_ge_95",7
+"nodes_ufboot_ge_80",10
+"nodes_ufboot_lt_80",9
