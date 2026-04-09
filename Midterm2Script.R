@@ -13,7 +13,7 @@ library(Biostrings)
 library(UniprotR)
 
 # read in the phylogeny tree from iqtree
-tree <- read.tree("metazoa_5k.treefile")
+tree <- read.tree("metazoa_alignment.5k.fasta.treefile")
 
 # root the tree on the porifera branch
 rooted_tree <- root(tree, outgroup = c("Plakina_jani", "Grantia_compressa"), resolve.root = TRUE)
@@ -101,7 +101,7 @@ names(protein_seq) <- "Homo_sapiens_protein"
 writeXStringSet(protein_seq, "protein_sequence.fasta")
 
 # add the best uniprot accession after searching the protein sequence
-accessions <- c("PASTE_UNIPROT_ACCESSION_HERE")
+accessions <- c("P54098")
 writeLines(accessions, "uniprot_accessions.txt")
 
 # run uniprot functions once the accession has been filled in
@@ -112,5 +112,3 @@ PlotGOAll(GOObj = go_info, Top = 10, directorypath = getwd(), width = 8, height 
 names_taxa <- GetNamesTaxa(accessions)
 write.csv(names_taxa, "sequence_names_taxa.csv", row.names = FALSE)
 
-uniprot_data <- fetch_uniprot(accessions)
-write.csv(uniprot_data, "sequence_uniprot_info.csv", row.names = FALSE)
